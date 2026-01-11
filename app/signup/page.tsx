@@ -13,6 +13,7 @@ export default function SignupPage() {
     phone: '',
     message: ''
   });
+  const [accountNotifications, setAccountNotifications] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -250,6 +251,22 @@ export default function SignupPage() {
                       />
                       <label htmlFor="call-consent" className="ml-3 text-sm leading-relaxed">
                         By checking this box, you provide consent to receive automated customer care calls from BWO Verify. Call frequency varies and standard phone rates may apply. You may opt-out at any time by contacting support@bwoverify.com. Consent is not required as a condition of purchasing any products or services.
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Account Notifications Opt-in Checkbox */}
+                  <div className="bg-gray-50 border border-gray-300 rounded-lg p-6">
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="account-notifications"
+                        checked={accountNotifications}
+                        onChange={(e) => setAccountNotifications(e.target.checked)}
+                        className="mt-1 h-4 w-4 text-[#d364a4] focus:ring-[#d364a4] border-gray-300 rounded flex-shrink-0"
+                      />
+                      <label htmlFor="account-notifications" className="ml-3 text-sm leading-relaxed text-gray-700">
+                        By checking this box, you consent to receive account notifications, service updates, and important information about your BWO Verify account via email and SMS. You may opt-out at any time by contacting support@bwoverify.com or by following the unsubscribe instructions in our communications. Consent is not required as a condition of purchasing any products or services.
                       </label>
                     </div>
                   </div>
