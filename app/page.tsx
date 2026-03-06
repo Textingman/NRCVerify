@@ -236,8 +236,17 @@ export default function HomePage() {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2">
+                <li className="text-gray-400">support@nrcverify.com</li>
+                <li className="text-gray-400">+1 732 320 7235</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Business Address</h4>
               <p className="text-gray-400">
-                support@nrcverify.com
+                2000 NE 42nd Ave PMB 1251<br />
+                Portland, OR 97213<br />
+                United States of America
               </p>
             </div>
           </div>

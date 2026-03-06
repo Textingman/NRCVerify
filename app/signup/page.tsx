@@ -14,7 +14,6 @@ export default function SignupPage() {
     message: ''
   });
   const [smsConsent, setSmsConsent] = useState(false);
-  const [emailConsent, setEmailConsent] = useState(false);
   const [termsConsent, setTermsConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -230,47 +229,23 @@ export default function SignupPage() {
                 {/* Consent Checkboxes */}
                 <div className="space-y-4">
                   {/* SMS Consent Checkbox */}
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                  <div className="bg-[#1e2a3a] rounded-xl p-6">
                     <div className="flex items-start">
                       <input
                         type="checkbox"
                         id="sms-consent"
                         checked={smsConsent}
                         onChange={(e) => setSmsConsent(e.target.checked)}
-                        className="mt-1 h-4 w-4 text-[#2563eb] focus:ring-[#2563eb] border-gray-300 rounded flex-shrink-0"
+                        className="mt-1 h-5 w-5 border-2 border-white rounded flex-shrink-0 accent-white"
                       />
-                      <label htmlFor="sms-consent" className="ml-3 text-sm leading-relaxed text-gray-700">
-                        I consent to receive text messages from NRC Verify, including form completion reminders, account verification requests, and service updates. Message frequency varies (up to 4 messages per month). Message and data rates may apply. Reply HELP for help or STOP to cancel. By opting in, you agree to our{' '}
-                        <Link href="/terms" className="text-[#e91e63] hover:text-[#c2185b] font-medium underline">
-                          Terms of Service
-                        </Link>{' '}
-                        and{' '}
-                        <Link href="/privacy" className="text-[#e91e63] hover:text-[#c2185b] font-medium underline">
-                          Privacy Policy
-                        </Link>
-                        . Consent is not required to use our services.
-                      </label>
-                    </div>
-                  </div>
-
-                  {/* Promotional Emails Checkbox */}
-                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-                    <div className="flex items-start">
-                      <input
-                        type="checkbox"
-                        id="email-consent"
-                        checked={emailConsent}
-                        onChange={(e) => setEmailConsent(e.target.checked)}
-                        className="mt-1 h-4 w-4 text-[#2563eb] focus:ring-[#2563eb] border-gray-300 rounded flex-shrink-0"
-                      />
-                      <label htmlFor="email-consent" className="ml-3 text-sm leading-relaxed text-gray-700">
-                        I consent to receive promotional emails from NRC Verify. You can unsubscribe at any time by following the unsubscribe link in our emails or by contacting support@nrcverify.com.
+                      <label htmlFor="sms-consent" className="ml-3 text-base leading-relaxed text-white">
+                        By checking this box and submitting this form, you agree to receive account notification text messages from NRC Verify. I understand I may opt out of SMS communication by replying &apos;STOP&apos;. Reply HELP or email support@nrcverify.com for help. Message and Data rates may apply. Message frequency varies. Carriers are not liable for delayed or undelivered messages. Opting in to SMS is optional and not required to submit this form. All messages will be handled by NRC Verify.
                       </label>
                     </div>
                   </div>
 
                   {/* Terms & Privacy Policy Checkbox - Required */}
-                  <div className="bg-gray-50 border-2 border-gray-300 rounded-lg p-6">
+                  <div className="bg-white border border-gray-200 rounded-xl p-6">
                     <div className="flex items-start">
                       <input
                         type="checkbox"
@@ -278,12 +253,12 @@ export default function SignupPage() {
                         checked={termsConsent}
                         onChange={(e) => setTermsConsent(e.target.checked)}
                         required
-                        className="mt-1 h-4 w-4 text-[#2563eb] focus:ring-[#2563eb] border-gray-300 rounded flex-shrink-0"
+                        className="mt-1 h-5 w-5 border-2 border-gray-400 rounded flex-shrink-0"
                       />
-                      <label htmlFor="terms-consent" className="ml-3 text-sm leading-relaxed text-gray-700">
+                      <label htmlFor="terms-consent" className="ml-3 text-base leading-relaxed text-gray-800">
                         I agree to the{' '}
                         <Link href="/terms" className="text-[#e91e63] hover:text-[#c2185b] font-medium underline">
-                          Terms & Conditions
+                          Terms &amp; Conditions
                         </Link>{' '}
                         and{' '}
                         <Link href="/privacy" className="text-[#e91e63] hover:text-[#c2185b] font-medium underline">
