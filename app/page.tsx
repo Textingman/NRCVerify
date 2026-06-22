@@ -238,7 +238,7 @@ export default function HomePage() {
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2">
                 <li className="text-gray-400">support@nrcverify.com</li>
-                <li className="text-gray-400">+1 732 320 7235</li>
+                <li className="text-gray-400">+18444353969</li>
               </ul>
             </div>
             <div>
